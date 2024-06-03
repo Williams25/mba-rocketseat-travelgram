@@ -1,0 +1,242 @@
+:root {
+  --brand-color: #ef5f4c;
+  --background-color: #ffffff;
+  --surface-color: #f5f5f5;
+  --skeleton-color: #d9d9d9;
+  --shape-transparency: rgba(255, 255, 255, 0.56);
+  --text-color-primary: #313131;
+  --text-color-secondary: #6c6c6c;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Alice", serif;
+  position: relative;
+  background-color: var(--background-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+h1 {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.paragraph-md {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+}
+
+.paragraph-sm {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+}
+
+.content-header {
+  background-color: var(--surface-color);
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+header nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.2s linear;
+}
+
+header nav ul li svg {
+  transition: 0.2s linear;
+  fill: var(--text-color-secondary);
+}
+
+header nav ul li:hover {
+  color: var(--brand-color);
+}
+
+header nav ul li:hover svg {
+  fill: var(--brand-color);
+}
+
+.my-perfil-img img {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+}
+
+.content-header-my-details {
+  margin-top: 2.25rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content-header-my-details-card {
+  display: grid;
+  grid-template-columns: 176px 1fr;
+  gap: 1.5rem;
+  max-width: 592px;
+  width: 100%;
+}
+
+.content-header-my-details-card img {
+  min-width: 176px;
+  min-height: 176px;
+  max-width: 176px;
+  max-height: 176px;
+  border-radius: 50%;
+}
+
+.content-header-my-details-more ul {
+  list-style: none;
+}
+
+.content-header-my-details-more ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.content-header-my-details-more ul li + li {
+  margin-top: 1rem;
+}
+
+.content-trip {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1.25rem 2rem;
+  max-width: 1232px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+}
+
+.content-trip img {
+  transition: 0.2s linear;
+  min-width: 286px;
+  min-height: 286px;
+  max-width: 286px;
+  max-height: 286px;
+  border-radius: 20px;
+}
+
+.content-trip img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1231px) {
+  .content-trip {
+    max-width: 930px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .content-trip {
+    max-width: 630px;
+  }
+
+  .content-trip img {
+    min-width: 186px;
+    min-height: 186px;
+    max-width: 186px;
+    max-height: 186px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  header nav {
+    display: none;
+  }
+
+  .content-trip {
+    max-width: 363px;
+  }
+
+  .content-trip img {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content-header-my-details-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .content-trip {
+    max-width: 249px;
+  }
+}
+
+footer {
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: var(--skeleton-color) 1px solid;
+  margin-top: auto;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
